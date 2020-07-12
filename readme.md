@@ -7,7 +7,7 @@ Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcin
 ### X
 
 ```html
-<ul x-x>
+<ul class="X">
   <li>First
   <li>Second
   <li>Third
@@ -19,7 +19,17 @@ Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcin
 ### Y
 
 ```html
-<ul y-y>
+<ul class="Y">
+  <li>First
+  <li>Second
+  <li>Third
+</ul>
+```
+
+### Responsive
+
+```html
+<ul class="Y X>=48em">
   <li>First
   <li>Second
   <li>Third

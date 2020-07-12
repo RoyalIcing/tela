@@ -54,6 +54,7 @@
 
 /* Flex row */
 
+.X,
 [x-x] {
   display: flex;
   flex-direction: row;
@@ -81,6 +82,7 @@
 
 /* Flex column */
 
+.Y,
 [y-y] {
   display: flex;
   flex-direction: column;
@@ -115,7 +117,9 @@
 
 /* Flex column (medium) */
 
-@media (min-width: 768px) {
+/* 48em ~= 768px */
+@media (min-width: 48em) {
+  .X\>\=48em,
   [x-x~="md"] {
     display: flex;
     flex-direction: row;
