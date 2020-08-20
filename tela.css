@@ -98,6 +98,10 @@
   margin-top: 1rem;
 }
 
+.Y > * + * {
+  margin-top: var(--Y-spacing);
+}
+
 /* Padding */
 
 [p-t] {
