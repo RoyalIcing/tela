@@ -1,28 +1,40 @@
 # Tela
 
-Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@0d21d625a3c131a5a270c24ffb2b503f6e20bdc4/tela.css>
+Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@3d38f6a6a9069d795b7ccafd16762e83f851b61c/tela.css>
 
 ## Layout
 
 ### X
 
+- Uses flexbox with row direction, items aligned center.
+
 ```html
-<ul class="X">
-  <li>First
-  <li>Second
-  <li>Third
+<ul
+  class="X"
+  style="
+    --X-spacing: 1rem;
+  "
+>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
 </ul>
 ```
 
-- Uses flexbox with row direction.
-
 ### Y
 
+- Uses flexbox with column direction.
+
 ```html
-<ul class="Y">
-  <li>First
-  <li>Second
-  <li>Third
+<ul
+  class="Y"
+  style="
+    --Y-spacing: 1rem;
+  "
+>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
 </ul>
 ```
 
@@ -30,9 +42,9 @@ Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcin
 
 ```html
 <ul class="Y X>=48em">
-  <li>First
-  <li>Second
-  <li>Third
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
 </ul>
 ```
 
