@@ -58,8 +58,31 @@
 [x-x] {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: var(--X-justify, center);
+}
+
+.X.-X- {
+  justify-content: center;
+}
+.\|X-X\| {
+  justify-content: space-between;
+}
+.\|-X-X-\| {
+  justify-content: space-around;
+}
+
+.X > * + * {
+  margin-left: var(--X-spacing);
+}
+.X > *:first-child {
+  margin-left: var(--X-outer);
+}
+.X > *:last-child {
+  margin-right: var(--X-outer);
+}
+.X > [role="separator"] {
+  margin-left: auto;
 }
 
 [x-space="between"] {
@@ -86,12 +109,19 @@
 [y-y] {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.Y.-X- {
   align-items: center;
+}
+.-Y- {
+  justify-content: center;
 }
 
 [y-stretch] {
-  align-items: stretch;
+  /* align-items: stretch; */
 }
 
 [y-space] > * + * {
@@ -100,6 +130,10 @@
 
 .Y > * + * {
   margin-top: var(--Y-spacing);
+}
+.Y > * {
+  margin-left: var(--X-spacing);
+  margin-right: var(--X-spacing);
 }
 
 /* Padding */
