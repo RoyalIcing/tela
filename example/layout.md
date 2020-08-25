@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Playground</title>
-    <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="../tela.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
 
 <body>
-<div id="root"></div>
-<script src="./index.tsx"></script>
 <main>
 
 # Tela: layout

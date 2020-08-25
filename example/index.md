@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tela</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
 
 <body>
-<div id="root"></div>
-<script src="./index.tsx"></script>
 <main>
 
 # Tela: layout
 
 ## Layout
 
-## X: flexbox row container
+## X
+
+Flexbox row container
 
 ### `X`
 
@@ -67,6 +67,24 @@
 
 <div class="example">
   <ul class="X" style="--X-spacing: auto;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+
+### `X |X-`
+
+```html
+<ul class="X |X">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+```
+
+<div class="example">
+  <ul class="X |X">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
@@ -260,7 +278,7 @@
 ### `Y -X- · spacing: 1rem`
 
 ```html
-<ul class="Y -X-" style="--Y-spacing: 1rem;">
+<ul class="Y -X-" style="--Y-spacing: 1rem; height: 200px;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -268,7 +286,7 @@
 ```
 
 <div class="example">
-  <ul class="Y -X-" style="--Y-spacing: 1rem;">
+  <ul class="Y -X-" style="--Y-spacing: 1rem; height: 200px;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>

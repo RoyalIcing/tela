@@ -1,6 +1,6 @@
 # Tela
 
-Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@795ffd8719b5614bd22e0f41318b79b8df43c104/tela.css>
+Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@caef3d944ed2c707a4bec2bdd70dffe443a29b30/tela.css>
 
 ## Layout
 
