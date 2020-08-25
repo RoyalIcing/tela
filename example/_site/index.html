@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tela</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+<body>
+<div id="root"></div>
+<script src="./index.tsx"></script>
+<main>
+<h1>Tela: layout</h1>
+<h2>Layout</h2>
+<h2>X: flexbox row container</h2>
+<h3><code>X</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X · spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X&quot; style=&quot;--X-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X · spacing: auto</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X&quot; style=&quot;--X-spacing: auto;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X" style="--X-spacing: auto;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X · spacing: 1rem, separator between 2nd &amp; 3rd</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X&quot; style=&quot;--X-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li role=&quot;separator&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li role="separator"></li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X · spacing: 1rem, outer: auto</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X&quot; style=&quot;--X-spacing: 1rem; --X-outer: auto;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X" style="--X-spacing: 1rem; --X-outer: auto;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X -X- · spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X -X-&quot; style=&quot;--X-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X -X-" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X -X- · spacing: 5vw</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X -X-&quot; style=&quot;--X-spacing: 5vw;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X -X-" style="--X-spacing: 5vw;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>X -X- · spacing: auto</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X -X-&quot; style=&quot;--X-spacing: auto;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X -X-" style="--X-spacing: auto;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>|X-X| · min spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X |X-X|&quot; style=&quot;--X-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X |X-X|" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>|-X-X-| · min spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;X |-X-X-|&quot; style=&quot;--X-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="X |-X-X-|" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h2>Y: flexbox column container</h2>
+<h3><code>Y</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;Y&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="Y">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>Y · spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;Y&quot; style=&quot;--Y-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="Y" style="--Y-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>Y · spacing: 1rem, X-spacing: auto</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;Y&quot; style=&quot;--Y-spacing: 1rem; --X-spacing: auto&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="Y" style="--Y-spacing: 1rem; --X-spacing: auto">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>Y -X- · spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;Y -X-&quot; style=&quot;--Y-spacing: 1rem;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="Y -X-" style="--Y-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>Y -Y- · spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;Y -Y-&quot; style=&quot;--Y-spacing: 1rem; height: 200px;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="Y -Y-" style="--Y-spacing: 1rem; height: 200px;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+<h3><code>Y -X- -Y- · spacing: 1rem</code></h3>
+<pre><code class="language-html">&lt;ul class=&quot;Y -X- -Y-&quot; style=&quot;--Y-spacing: 1rem; height: 200px;&quot;&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<div class="example">
+  <ul class="Y -X- -Y-" style="--Y-spacing: 1rem; height: 200px;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+</main>
+</body>
+</html>

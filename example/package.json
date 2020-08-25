@@ -1,0 +1,17 @@
+{
+  "name": "tela",
+  "version": "1.0.0",
+  "main": "tela.css",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve index.md",
+    "build": "parcel build index.md"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "cssnano": "^4.1.10",
+    "marked": "^1.1.1",
+    "parcel": "^1.12.4",
+    "typescript": "^3.4.5"
+  }
+}
