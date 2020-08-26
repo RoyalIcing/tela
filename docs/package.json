@@ -4,15 +4,14 @@
   "main": "tela.css",
   "license": "MIT",
   "scripts": {
-    "start": "@11ty/eleventy --serve",
-    "build": "@11ty/eleventy"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "cssnano": "^4.1.10",
     "marked": "^1.1.1",
-    "parcel": "^1.12.4",
     "typescript": "^3.4.5"
   }
 }
