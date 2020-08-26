@@ -4,8 +4,8 @@
   "main": "tela.css",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve index.md",
-    "build": "parcel build index.md"
+    "start": "@11ty/eleventy --serve",
+    "build": "@11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
