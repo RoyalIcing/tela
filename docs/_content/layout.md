@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tela</title>
-    <link rel="stylesheet" href="/main.css" />
-  </head>
+---
+title: "Tela: Layout"
+---
 
-<body>
-<main>
-
-# Tela: layout
-
-## Layout
+# Layout
 
 ## X
 
@@ -183,7 +172,7 @@ Flexbox row container
   </ul>
 </div>
 
-### `|X-X| · min spacing: 1rem`
+### `X |X-X| · min spacing: 1rem`
 
 ```html
 <ul class="X |X-X|" style="--X-spacing: 1rem;">
@@ -201,7 +190,7 @@ Flexbox row container
   </ul>
 </div>
 
-### `|-X-X-| · min spacing: 1rem`
+### `X |-X-X-| · min spacing: 1rem`
 
 ```html
 <ul class="X |-X-X-|" style="--X-spacing: 1rem;">
