@@ -23,19 +23,28 @@ a {
   color: var(--link-color);
 }
 
-main, header[role=banner] {
-  max-width: 40em;
-  margin: auto;
+main > *, header[role=banner] > * {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
   padding: 0 1rem;
 }
 main {
   padding-bottom: 6rem;
 }
-main > * {
-  margin-bottom: 1rem;
+main > pre {
+  max-width: unset;
+}
+main > pre > code {
+  display: block;
+  max-width: 40rem;
+  margin: auto;
 }
 
 header[role=banner] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 

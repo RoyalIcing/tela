@@ -2,7 +2,7 @@
 title: "Tela: Layout"
 ---
 
-# Layout
+# Layout classes
 
 ## X
 
