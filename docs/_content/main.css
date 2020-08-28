@@ -5,6 +5,8 @@
 
 :root {
   --link-color: white;
+  --link-text-decoration: none;
+  --color-highlight-subtle: rgba(255,255,255, 0.1);
 
   font-size: 150%;
   line-height: 1.35;
@@ -21,6 +23,10 @@
 
 a {
   color: var(--link-color);
+  text-decoration: var(--link-text-decoration);
+}
+a:hover {
+  --link-text-decoration: underline;
 }
 
 main > *, header[role=banner] > * {
@@ -31,6 +37,8 @@ main > *, header[role=banner] > * {
   padding: 0 1rem;
 }
 main {
+  --link-text-decoration: underline;
+  
   padding-bottom: 6rem;
 }
 main > pre {
@@ -54,19 +62,30 @@ nav ul {
 }
 nav a {
   font-weight: bold;
-  text-decoration: none;
 }
 
-h1 {
-  letter-spacing: 0.03em;
-}
 h2,
 h3 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 pre {
   margin-bottom: 1rem;
+}
+code:not(pre *) {
+  background-color: var(--color-highlight-subtle);
 }
 
 ul[class] {
@@ -74,16 +93,16 @@ ul[class] {
 }
 
 .color-T {
-  color: rgb(76, 153, 240);
+  color: #62C6FF;
 }
 .color-E {
-  color: rgb(243, 214, 84);
+  color: #FFCB55;
 }
 .color-L {
-  color: rgb(245, 106, 187);
+  color: #FF94CF;
 }
 .color-A {
-  color: rgb(154, 121, 246);
+  color: #C98AFF;
 }
 
 .example {

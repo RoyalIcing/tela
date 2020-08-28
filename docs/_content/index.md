@@ -2,30 +2,55 @@
 title: "Tela"
 ---
 
-<h2><span class="color-T">Types</span> make the developer experience better</h2>
+```html
+<nav aria-label="Primary">
+  <ul class="X |-X-X-|">
+    <li><a href="/">Why?</a>
+    <li><a href="/install">Install</a>
+    <li><a href="/usage">Usage</a>
+    <li><a href="/about">About</a>
+  </ul>
+</nav>
+```
+
+<h2>A really <span class="color-T">tiny</span> surface area, stretched far</h2>
+
+<!--<h2><span class="color-T">Types</span> make the developer experience better</h2>-->
+
+1. I want a minimal amount of CSS, and to reuse it as much as possible.
+1. I want to use those styles everywhere, and not be locked into a JavaScript-only solution.
+1. I want to make responsive layouts quickly.
+1. It doesn’t need to solve every problem. Tela can be paired with Tailwind, BEM, Bootstrap, or whatever!
+1. I don’t want to fight a bundler.
 
 How do I know that a class string has a valid rule defined somewhere? How do I know a particular class is actually being used? These questions being hard to answer lead to styles being hard to change — how do I know this won't break something? So we leave most CSS alone and it grows ever larger.
 
-I want two things:
+### Custom properties maximize reuse
 
-- I want to know as soon as possible if I misspell a class name.
-- I want autocompletion as I author so I can discover what's available, and create faster.
 
-Having a stricter system also unlocks the ability to generate just the styling tiles I need based on their usage. There's more to come here.
+
+### Types enhance the developer experience
+
+- I want to know ASAP if I misspell a CSS class name.
+- I want autocompletion as I write so I can discover what's available, and create faster.
+
+Having a stricter system also unlocks the ability to generate just the styling rules I need based on what’s been used, rather than generating all styles upfront. There's more to come here.
 
 <h2>I want styles that work <span class="color-E">everywhere</span></h2>
 
 If you have been writing React apps, you probably know there's been a *lot* of approaches for writing styles. CSS-in-JS solutions attempt to make styling more naturally aligned with a world of components. 
 
-They also must then solve problems such as generating the styles when server rendering, how to reduce the time to initial paint, how to reduce their runtime both in terms of download time and execution time.
+However, this leads to then solving problems such as generating the styles when server rendering, how to reduce their runtime both in terms of download time and execution time, and not delaying the time to initial paint.
 
-I don't want to solve these problems. They started with trying to make the developer experience better, and often they just make it more difficult. I want something simple that I can reason about without sweat.
+I don't want to solve these problems. They started with trying to make the developer experience better, yet often they just make it more difficult. I want something simple that I can reason about without sweat.
 
 CSS custom properties (aka CSS variables) allow a level of flexibility and simplification of patterns that CSS often lacked. They are part of web standards, will be around for decades, and so are worth investing quality time into.
 
-Writing CSS-in-JS means that I write React styles, and then use React for everything even if it's not the preferable choice. I want styles that work in single page apps, server generated HTML, in static HTML, and everything in between. I don't want to worry that it won't work, requires a dependency update, or creates performance problems that wastes my time and users’.
+### The problem with CSS-in-JS
 
-Not that this doesn't mean we can't have fantastic components and systems for our styles native to our framework. We can write fantastic systems for say React that wrap the underlying styles. But we won't be locked into *only* that.
+Writing CSS-in-JS means that I write React-coupled styles and then use React for everything, even if it's not the preferable choice. I want styles that work in single page apps, server generated HTML, static HTML, and everything in between. I don't want to worry that it won't work, requires a dependency update, or creates performance problems that wastes my time and users’.
+
+Note that this doesn't mean we can't have fantastic components and systems for our styles native to our framework. We can write fantastic systems for say React that enhance the underlying styles. But we won't be locked into *only* using that.
 
 <h2><span class="color-L">Layout</span> in CSS still requires a lot of thinking</h2>
 

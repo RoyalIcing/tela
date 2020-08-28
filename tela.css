@@ -65,6 +65,12 @@
 .X.-X- {
   justify-content: center;
 }
+.X.\|X- {
+  justify-content: flex-start;
+}
+.X.-X\| {
+  justify-content: flex-end;
+}
 .\|X-X\| {
   justify-content: space-between;
 }

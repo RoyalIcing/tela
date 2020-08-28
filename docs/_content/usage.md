@@ -1,14 +1,21 @@
 ---
-title: "Tela: Layout"
+title: "Tela: Usage"
 ---
 
 # Layout classes
 
 ## X
 
-Flexbox row container
+Flexbox row container.
 
-### `X`
+- Set `--X-spacing` property to add a gap between items.
+- Center justified by default.
+- Add `|X-` class to justify to start (left).
+- Add `-X|` class to justify to end (right).
+- Add `|X-X|` class to justify to add automatic space between items.
+- Add `|-X-X-|` class to justify to add automatic space around items.
+
+### `X` *= center justified by default*
 
 ```html
 <ul class="X">
@@ -26,7 +33,7 @@ Flexbox row container
   </ul>
 </div>
 
-### `X · spacing: 1rem`
+### `X + 1rem spacing` *= center justified with 1rem gap*
 
 ```html
 <ul class="X" style="--X-spacing: 1rem;">
@@ -62,10 +69,10 @@ Flexbox row container
   </ul>
 </div>
 
-### `X |X-`
+### Start (left) aligned: `X |X-`
 
 ```html
-<ul class="X |X">
+<ul class="X |X-" style="--X-spacing: 1rem;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -73,7 +80,25 @@ Flexbox row container
 ```
 
 <div class="example">
-  <ul class="X |X">
+  <ul class="X |X-" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+
+### `X -X|`
+
+```html
+<ul class="X -X|" style="--X-spacing: 1rem;">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+```
+
+<div class="example">
+  <ul class="X -X|" style="--X-spacing: 1rem;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
