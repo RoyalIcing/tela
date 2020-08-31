@@ -69,7 +69,7 @@ Flexbox row container.
   </ul>
 </div>
 
-### Start (left) aligned: `X |X-`
+### Start (left) justified: `X |X-`
 
 ```html
 <ul class="X |X-" style="--X-spacing: 1rem;">
@@ -87,7 +87,7 @@ Flexbox row container.
   </ul>
 </div>
 
-### `X -X|`
+### End (right) justified: `X -X|`
 
 ```html
 <ul class="X -X|" style="--X-spacing: 1rem;">
@@ -292,7 +292,7 @@ Flexbox row container.
 ### `Y -X- · spacing: 1rem`
 
 ```html
-<ul class="Y -X-" style="--Y-spacing: 1rem; height: 200px;">
+<ul class="Y -X-" style="--Y-spacing: 1rem; height: 300px;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -300,7 +300,7 @@ Flexbox row container.
 ```
 
 <div class="example">
-  <ul class="Y -X-" style="--Y-spacing: 1rem; height: 200px;">
+  <ul class="Y -X-" style="--Y-spacing: 1rem; height: 300px;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
@@ -310,7 +310,7 @@ Flexbox row container.
 ### `Y -Y- · spacing: 1rem`
 
 ```html
-<ul class="Y -Y-" style="--Y-spacing: 1rem; height: 200px;">
+<ul class="Y -Y-" style="--Y-spacing: 1rem; height: 300px;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -318,7 +318,7 @@ Flexbox row container.
 ```
 
 <div class="example">
-  <ul class="Y -Y-" style="--Y-spacing: 1rem; height: 200px;">
+  <ul class="Y -Y-" style="--Y-spacing: 1rem; height: 300px;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
@@ -328,7 +328,7 @@ Flexbox row container.
 ### `Y -X- -Y- · spacing: 1rem`
 
 ```html
-<ul class="Y -X- -Y-" style="--Y-spacing: 1rem; height: 200px;">
+<ul class="Y -X- -Y-" style="--Y-spacing: 1rem; height: 300px;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -336,7 +336,7 @@ Flexbox row container.
 ```
 
 <div class="example">
-  <ul class="Y -X- -Y-" style="--Y-spacing: 1rem; height: 200px;">
+  <ul class="Y -X- -Y-" style="--Y-spacing: 1rem; height: 300px;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
