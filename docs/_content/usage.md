@@ -4,6 +4,9 @@ title: "Tela: Usage"
 
 # Layout classes
 
+- The **X** class lays out a flexbox container in the row direction.
+- The **Y** class lays out a flexbox container in the column direction.
+
 ## X
 
 Flexbox row container.
