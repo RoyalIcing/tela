@@ -4,9 +4,9 @@
 /* @import url(https://unpkg.com/prism-theme-night-owl@1.4.0/build/light.css); */
 
 :root {
-  --link-color: white;
-  --link-text-decoration: none;
-  --color-highlight-subtle: rgba(255,255,255, 0.1);
+  --Link--color: white;
+  --Link--text-decoration: none;
+  --color-highlight-subtle: rgba(255, 255, 255, 0.1);
 
   font-size: 150%;
   line-height: 1.35;
@@ -14,22 +14,33 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   background: #222;
+  --Link--current-page: underline;
+  --Link--current-page--border-width: 0 0 3px 0;
 }
 
 * {
   margin: 0;
   padding: 0;
+  border: 0 solid currentColor;
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: var(--link-text-decoration);
+  padding: var(--Link--padding);
+  color: var(--Link--color);
+  text-decoration: var(--Link--text-decoration);
 }
 a:hover {
-  --link-text-decoration: underline;
+  background: var(--Link--background--hover);
+  text-decoration: var(--Link--text-decoration--hover);
+}
+a[aria-current="page"] {
+  color: var(--Link-current-page);
+  background: var(--Link-current-page);
+  border-width: var(--Link--current-page--border-width);
 }
 
-main > *, header[role=banner] > * {
+main > *,
+header[role="banner"] > * {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
@@ -37,8 +48,8 @@ main > *, header[role=banner] > * {
   padding: 0 1rem;
 }
 main {
-  --link-text-decoration: underline;
-  
+  --Link--text-decoration: underline;
+
   padding-bottom: 6rem;
 }
 main > pre {
@@ -50,7 +61,7 @@ main > pre > code {
   margin: auto;
 }
 
-header[role=banner] {
+header[role="banner"] {
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
@@ -93,16 +104,16 @@ ul[class] {
 }
 
 .color-T {
-  color: #62C6FF;
+  color: #62c6ff;
 }
 .color-E {
-  color: #FFCB55;
+  color: #ffcb55;
 }
 .color-L {
-  color: #FF94CF;
+  color: #ff94cf;
 }
 .color-A {
-  color: #C98AFF;
+  color: #c98aff;
 }
 
 .example {

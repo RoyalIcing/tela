@@ -5,7 +5,7 @@ title: "Tela"
 ```html
 <nav aria-label="Primary">
   <ul class="X |-X-X-|">
-    <li><a href="/">Why?</a>
+    <li><a href="/" aria-current="page">Why?</a>
     <li><a href="/install">Install</a>
     <li><a href="/usage">Usage</a>
     <li><a href="/about">About</a>

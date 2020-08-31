@@ -1,8 +1,8 @@
 <nav aria-label="Primary">
   <ul class="X |-X-X-|">
-    <li><a href="/">Why?</a>
-    <li><a href="/install">Install</a>
-    <li><a href="/usage">Usage</a>
-    <li><a href="/about">About</a>
+    <li><a href="/" aria-current="{{ 'page' if page.url == '/' }}">Why?</a>
+    <li><a href="/install/" aria-current="{{ 'page' if page.url == '/install/' }}">Install</a>
+    <li><a href="/usage/" aria-current="{{ 'page' if page.url == '/usage/' }}">Usage</a>
+    <li><a href="/about/" aria-current="{{ 'page' if page.url == '/about/' }}">About</a>
   </ul>
 </nav>
