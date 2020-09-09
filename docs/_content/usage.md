@@ -148,7 +148,7 @@ Flexbox row container.
 
 ## Y: flexbox column container
 
-### `Y`
+### `Y` *= vertically stacked*
 
 ```html
 <ul class="Y" style="height: 300px;">
@@ -166,7 +166,7 @@ Flexbox row container.
   </ul>
 </div>
 
-### `Y · spacing: 1rem`
+### `Y · spacing: 1rem` *= vertically stacked with 1rem gap*
 
 ```html
 <ul class="Y" style="--Y-spacing: 1rem; height: 300px;">
