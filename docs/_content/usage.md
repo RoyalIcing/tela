@@ -4,14 +4,18 @@ title: "Tela: Usage"
 
 # Layout classes
 
+The primary layout primitives in Tela are **X** and **Y**.
+
 - The **X** class lays out a flexbox container in the row direction.
 - The **Y** class lays out a flexbox container in the column direction.
+- CSS custom properties can be used to adjust the spacing between child items.
+- Additional classes can be added to justify and align items.
 
 ## X
 
 Flexbox row container.
 
-- Set `--X-spacing` property to add a gap between items.
+- Set `--X-spacing` CSS property to add a gap between items.
 - Center justified by default.
 - Add `|X-` class to justify to start (left).
 - Add `-X|` class to justify to end (right).
@@ -146,7 +150,13 @@ Flexbox row container.
   </ul>
 </div>
 
-## Y: flexbox column container
+## Y
+
+Flexbox column container
+
+- Set `--Y-spacing` CSS property to add a vertical gap between items.
+- Add `-Y-` class to vertically center.
+- Add `-X-` class to horizontally center.
 
 ### `Y` *= vertically stacked*
 
