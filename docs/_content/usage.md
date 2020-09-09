@@ -151,7 +151,7 @@ Flexbox row container.
 ### `Y`
 
 ```html
-<ul class="Y" style="--Y-spacing: 1rem;">
+<ul class="Y" style="height: 300px;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -159,7 +159,7 @@ Flexbox row container.
 ```
 
 <div class="example">
-  <ul class="Y" style="--Y-spacing: 1rem;">
+  <ul class="Y" style="height: 300px;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
