@@ -18,7 +18,7 @@ Flexbox row container.
 - Add `|X-X|` class to justify to add automatic space between items.
 - Add `|-X-X-|` class to justify to add automatic space around items.
 
-### `X` *= center justified by default*
+### `X` *= centered by default*
 
 ```html
 <ul class="X">
@@ -36,7 +36,7 @@ Flexbox row container.
   </ul>
 </div>
 
-### `X + 1rem spacing` *= center justified with 1rem gap*
+### `X + 1rem spacing` *= centered with 1rem gap*
 
 ```html
 <ul class="X" style="--X-spacing: 1rem;">
@@ -54,25 +54,7 @@ Flexbox row container.
   </ul>
 </div>
 
-### `X · spacing: auto`
-
-```html
-<ul class="X" style="--X-spacing: auto;">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="X" style="--X-spacing: auto;">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### Start (left) justified: `X |X-`
+### `X |X-` *= start/left justified*
 
 ```html
 <ul class="X |X-" style="--X-spacing: 1rem;">
@@ -90,7 +72,7 @@ Flexbox row container.
   </ul>
 </div>
 
-### End (right) justified: `X -X|`
+### `X -X|` *= end/right justified*
 
 ```html
 <ul class="X -X|" style="--X-spacing: 1rem;">
@@ -102,98 +84,6 @@ Flexbox row container.
 
 <div class="example">
   <ul class="X -X|" style="--X-spacing: 1rem;">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `X · spacing: 1rem, separator between 2nd & 3rd`
-
-```html
-<ul class="X" style="--X-spacing: 1rem;">
-  <li>First</li>
-  <li>Second</li>
-  <li role="separator"></li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="X" style="--X-spacing: 1rem;">
-    <li>First</li>
-    <li>Second</li>
-    <li role="separator"></li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `X · spacing: 1rem, outer: auto`
-
-```html
-<ul class="X" style="--X-spacing: 1rem; --X-outer: auto;">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="X" style="--X-spacing: 1rem; --X-outer: auto;">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `X -X- · spacing: 1rem`
-
-```html
-<ul class="X -X-" style="--X-spacing: 1rem;">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="X -X-" style="--X-spacing: 1rem;">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `X -X- · spacing: 5vw`
-
-```html
-<ul class="X -X-" style="--X-spacing: 5vw;">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="X -X-" style="--X-spacing: 5vw;">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `X -X- · spacing: auto`
-
-```html
-<ul class="X -X-" style="--X-spacing: auto;">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="X -X-" style="--X-spacing: auto;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
@@ -232,6 +122,26 @@ Flexbox row container.
   <ul class="X |-X-X-|" style="--X-spacing: 1rem;">
     <li>First</li>
     <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+
+### `X · spacing: 1rem, separator between 2nd & 3rd`
+
+```html
+<ul class="X" style="--X-spacing: 1rem;">
+  <li>First</li>
+  <li>Second</li>
+  <li role="separator"></li>
+  <li>Third</li>
+</ul>
+```
+
+<div class="example">
+  <ul class="X" style="--X-spacing: 1rem;">
+    <li>First</li>
+    <li>Second</li>
+    <li role="separator"></li>
     <li>Third</li>
   </ul>
 </div>
