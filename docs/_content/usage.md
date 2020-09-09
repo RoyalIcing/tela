@@ -151,24 +151,6 @@ Flexbox row container.
 ### `Y`
 
 ```html
-<ul class="Y">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="Y">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `Y · spacing: 1rem`
-
-```html
 <ul class="Y" style="--Y-spacing: 1rem;">
   <li>First</li>
   <li>Second</li>
@@ -184,10 +166,10 @@ Flexbox row container.
   </ul>
 </div>
 
-### `Y · spacing: 1rem, X-spacing: auto`
+### `Y · spacing: 1rem`
 
 ```html
-<ul class="Y" style="--Y-spacing: 1rem; --X-spacing: auto">
+<ul class="Y" style="--Y-spacing: 1rem; height: 300px;">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -195,32 +177,15 @@ Flexbox row container.
 ```
 
 <div class="example">
-  <ul class="Y" style="--Y-spacing: 1rem; --X-spacing: auto">
+  <ul class="Y" style="--Y-spacing: 1rem; height: 300px;">
     <li>First</li>
     <li>Second</li>
     <li>Third</li>
   </ul>
 </div>
 
-### `Y -X- · spacing: 1rem`
 
-```html
-<ul class="Y -X-" style="--Y-spacing: 1rem; height: 300px;">
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
-</ul>
-```
-
-<div class="example">
-  <ul class="Y -X-" style="--Y-spacing: 1rem; height: 300px;">
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-  </ul>
-</div>
-
-### `Y -Y- · spacing: 1rem`
+### `Y -Y- · spacing: 1rem` *= vertically centered*
 
 ```html
 <ul class="Y -Y-" style="--Y-spacing: 1rem; height: 300px;">
@@ -238,7 +203,25 @@ Flexbox row container.
   </ul>
 </div>
 
-### `Y -X- -Y- · spacing: 1rem`
+### `Y -X- · spacing: 1rem` *= horizontally centered*
+
+```html
+<ul class="Y -X-" style="--Y-spacing: 1rem; height: 300px;">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+```
+
+<div class="example">
+  <ul class="Y -X-" style="--Y-spacing: 1rem; height: 300px;">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+</div>
+
+### `Y -X- -Y- · spacing: 1rem` *= horizontally & vertically centered*
 
 ```html
 <ul class="Y -X- -Y-" style="--Y-spacing: 1rem; height: 300px;">
