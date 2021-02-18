@@ -1,4 +1,4 @@
-[visually-hidden] {
+.visually-hidden, [data-only] {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -11,51 +11,50 @@
 
 /* Font */
 
-[font-size="+7"] {
+[data-size="+7"] {
   font-size: var(--size-7);
 }
-[font-size="+6"] {
+[data-size="+6"] {
   font-size: var(--size-6);
 }
-[font-size="+5"] {
+[data-size="+5"] {
   font-size: var(--size-5);
 }
-[font-size="+4"] {
+[data-size="+4"] {
   font-size: var(--size-4);
 }
-[font-size="+3"] {
+[data-size="+3"] {
   font-size: var(--size-3);
 }
-[font-size="+2"] {
+[data-size="+2"] {
   font-size: var(--size-2);
 }
-[font-size="+1"] {
+[data-size="+1"] {
   font-size: var(--size-1);
 }
-[font-size="0"] {
+[data-size="0"] {
   font-size: var(--size-0);
 }
-[font-size="-1"] {
+[data-size="-1"] {
   font-size: var(--size--1);
 }
-[font-size="-2"] {
+[data-size="-2"] {
   font-size: var(--size--2);
 }
 
 /* Sizing */
 
-[w-max="md"] {
-  max-width: 768px;
+[data-w-max="md"] {
+  max-width: var(--md);
 }
 
-[w-full] {
+[data-w-full] {
   width: 100%;
 }
 
 /* Flex row */
 
-.X,
-[x-x] {
+.X {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,10 +70,10 @@
 .X.-X\| {
   justify-content: flex-end;
 }
-.\|X-X\| {
+.X.\|X-X\| {
   justify-content: space-between;
 }
-.\|-X-X-\| {
+.X.\|-X-X-\| {
   justify-content: space-around;
 }
 
@@ -91,28 +90,9 @@
   margin-left: auto;
 }
 
-[x-space="between"] {
-  justify-content: space-between;
-}
-
-[x-space] > * + * {
-  margin-left: 1rem;
-}
-[x-space="1/2"] > * + * {
-  margin-left: 0.5rem;
-}
-[x-space="1/4"] > * + * {
-  margin-left: 0.25rem;
-}
-[x-space="auto"] > * {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Flex column */
 
-.Y,
-[y-y] {
+.Y {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -122,16 +102,8 @@
 .Y.-X- {
   align-items: center;
 }
-.-Y- {
+.Y.-Y- {
   justify-content: center;
-}
-
-[y-stretch] {
-  /* align-items: stretch; */
-}
-
-[y-space] > * + * {
-  margin-top: 1rem;
 }
 
 .Y > * + * {
@@ -142,29 +114,13 @@
   margin-right: var(--X-spacing);
 }
 
-/* Padding */
-
-[p-t] {
-  padding-top: 1rem;
-}
-[p-b] {
-  padding-bottom: 1rem;
-}
-[p-l] {
-  padding-left: 1rem;
-}
-[p-r] {
-  padding-right: 1rem;
-}
-
 /* MEDIUM BREAKPOINT */
 
 /* Flex column (medium) */
 
 /* 48em ~= 768px */
 @media (min-width: 48em) {
-  .X\>\=48em,
-  [x-x~="md"] {
+  .X\>\=48em {
     display: flex;
     flex-direction: row;
     justify-content: center;

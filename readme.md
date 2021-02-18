@@ -63,7 +63,7 @@ You must define the following CSS variables:
   --size-3: 1.5rem;
   --size-2: 1.25rem;
   --size-1: 1.125rem;
-  --size-0: 1.125rem;
+  --size-0: 1rem;
   --size--1: 0.875rem;
   --size--2: 0.75rem;
 }
