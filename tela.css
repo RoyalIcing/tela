@@ -52,6 +52,16 @@
   width: 100%;
 }
 
+/* Grid */
+
+.G {
+  display: grid;
+  grid-template-columns: repeat(var(--G-column-count), minmax(0, 1fr));
+}
+.G.\|-\+-\| { --G-column-count: 2 }
+.G.\|-\+-\+-\| { --G-column-count: 3 }
+.G.\|-\+-\+-\+-\| { --G-column-count: 4 }
+
 /* Flex row */
 
 .X {
@@ -60,22 +70,11 @@
   align-items: center;
   justify-content: var(--X-justify, center);
 }
-
-.X.-X- {
-  justify-content: center;
-}
-.X.\|X- {
-  justify-content: flex-start;
-}
-.X.-X\| {
-  justify-content: flex-end;
-}
-.X.\|X-X\| {
-  justify-content: space-between;
-}
-.X.\|-X-X-\| {
-  justify-content: space-around;
-}
+.X.-X- { --X-justify: center }
+.X.\|X- { --X-justify: flex-start }
+.X.-X\| { --X-justify: flex-end }
+.X.\|X-X\| { --X-justify: space-between }
+.X.\|-X-X-\| { --X-justify: space-around }
 
 .X > * + * {
   margin-left: var(--X-spacing);

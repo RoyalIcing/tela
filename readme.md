@@ -4,9 +4,39 @@ Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcin
 
 ## Layout
 
+### Grid
+
+Uses CSS grid.
+
+#### Two column grid:
+
+```html
+<ul
+class="G |-+-|"
+>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+<li>Fourth</li>
+</ul>
+```
+
+#### Three column grid:
+
+```html
+<ul
+class="G |-+-+-|"
+>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+<li>Fourth</li>
+</ul>
+```
+
 ### X
 
-- Uses flexbox with row direction, items aligned center.
+Uses flexbox with row direction, items aligned center.
 
 ```html
 <ul
@@ -23,7 +53,7 @@ Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcin
 
 ### Y
 
-- Uses flexbox with column direction.
+Uses flexbox with column direction.
 
 ```html
 <ul
@@ -52,7 +82,7 @@ Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcin
 
 ## Getting started
 
-You must define the following CSS variables:
+You may define the following CSS variables:
 
 ```css
 :root {
