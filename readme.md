@@ -2,13 +2,11 @@
 
 Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@3d61f6e92daaed960b19598c6c1d851420feae4e/tela.css>
 
-## Layout
-
-### Grid
+## Grid
 
 Uses CSS grid.
 
-#### Two column grid:
+### Two column grid:
 
 ```html
 <ul
@@ -21,7 +19,7 @@ class="G |-+-|"
 </ul>
 ```
 
-#### Three column grid:
+### Three column grid:
 
 ```html
 <ul
@@ -34,7 +32,20 @@ class="G |-+-+-|"
 </ul>
 ```
 
-### X
+### Four column grid:
+
+```html
+<ul
+class="G |-+-+-+-|"
+>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+<li>Fourth</li>
+</ul>
+```
+
+## X
 
 Uses flexbox with row direction, items aligned center.
 
@@ -51,7 +62,7 @@ Uses flexbox with row direction, items aligned center.
 </ul>
 ```
 
-### Y
+## Y
 
 Uses flexbox with column direction.
 
@@ -68,7 +79,20 @@ Uses flexbox with column direction.
 </ul>
 ```
 
-### Responsive
+## Text
+
+### Centering text
+
+```html
+<div
+  class="-X-"
+>
+  <h1>Some heading</h1>
+  <p>Some descriptive text</p
+</div>
+```
+
+## Responsive
 
 ```html
 <ul class="Y X>=48em">
@@ -77,8 +101,6 @@ Uses flexbox with column direction.
   <li>Third</li>
 </ul>
 ```
-
-- Uses flexbox with column direction.
 
 ## Getting started
 
