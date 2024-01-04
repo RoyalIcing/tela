@@ -15,6 +15,30 @@
   padding-right: var(--px);
 }
 
+x-x,
+x-y {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* flex-row both on mobile and above */
+}
+y-y,
+y-x {
+  display: flex;
+  flex-direction: column;
+  /* flex-column both on mobile and above */
+}
+/* tailwind sm = 24rem = 384px */
+/* tailwind md = 28rem = 448px */
+@media (min-width: 28rem) {
+  x-y {
+    flex-direction: column;
+  }
+  y-x {
+    flex-direction: row;
+  }
+}
+
 a {
   padding-left: var(--link--padding-x);
   padding-right: var(--link--padding-x);
@@ -42,15 +66,17 @@ a:hover {
 
 /* Visually hidden */
 
-.visually-hidden, [data-only] {
+.visually-hidden,
+[data-only] {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
-  border: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Sizing */
@@ -91,9 +117,15 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(var(--G-column-count), minmax(0, 1fr));
 }
-.G.\|-\+-\| { --G-column-count: 2 }
-.G.\|-\+-\+-\| { --G-column-count: 3 }
-.G.\|-\+-\+-\+-\| { --G-column-count: 4 }
+.G.\|-\+-\| {
+  --G-column-count: 2;
+}
+.G.\|-\+-\+-\| {
+  --G-column-count: 3;
+}
+.G.\|-\+-\+-\+-\| {
+  --G-column-count: 4;
+}
 
 /* Flex row */
 
@@ -104,11 +136,21 @@ a:hover {
   align-items: center;
   justify-content: var(--X-justify, center);
 }
-.X.-X- { --X-justify: center }
-.X.\|X- { --X-justify: flex-start }
-.X.-X\| { --X-justify: flex-end }
-.X.\|X-X\| { --X-justify: space-between }
-.X.\|-X-X-\| { --X-justify: space-around }
+.X.-X- {
+  --X-justify: center;
+}
+.X.\|X- {
+  --X-justify: flex-start;
+}
+.X.-X\| {
+  --X-justify: flex-end;
+}
+.X.\|X-X\| {
+  --X-justify: space-between;
+}
+.X.\|-X-X-\| {
+  --X-justify: space-around;
+}
 
 .X > * + * {
   margin-left: var(--X-spacing);
@@ -147,7 +189,9 @@ a:hover {
   margin-right: var(--X-spacing);
 }
 
-.X hr, hr[data-x], hr[data-y] {
+.X hr,
+hr[data-x],
+hr[data-y] {
   border: none;
 }
 
