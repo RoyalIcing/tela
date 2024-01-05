@@ -28,9 +28,8 @@ y-x {
   flex-direction: column;
   /* flex-column both on mobile and above */
 }
-/* tailwind sm = 24rem = 384px */
-/* tailwind md = 28rem = 448px */
-@media (min-width: 28rem) {
+/* tailwind sm = 640px */
+@media (min-width: 640px) {
   x-y {
     flex-direction: column;
   }
