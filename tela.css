@@ -20,15 +20,13 @@ x-y {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* flex-row both on mobile and above */
 }
 y-y,
 y-x {
   display: flex;
   flex-direction: column;
-  /* flex-column both on mobile and above */
 }
-/* tailwind sm = 640px */
+/* Tailwind sm breakpoint is 640px */
 @media (min-width: 640px) {
   x-y {
     flex-direction: column;
@@ -36,6 +34,22 @@ y-x {
   y-x {
     flex-direction: row;
   }
+}
+
+/* Visually hidden */
+
+data-only,
+.visually-hidden,
+[data-only] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 a {
@@ -61,21 +75,6 @@ a:hover {
 [data-links~="underline-on-hover"] {
   --link--decoration: none;
   --link--decoration--hover: underline;
-}
-
-/* Visually hidden */
-
-.visually-hidden,
-[data-only] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }
 
 /* Sizing */
