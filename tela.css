@@ -16,23 +16,32 @@
 }
 
 x-x,
-x-y {
+x-y,
+.x-x,
+.x-y {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 }
 y-y,
-y-x {
+y-x,
+.y-y,
+.y-x {
   display: flex;
   flex-direction: column;
 }
 /* Tailwind sm breakpoint is 640px */
 @media (min-width: 640px) {
-  x-y {
+  x-y,
+  .x-y {
     flex-direction: column;
   }
-  y-x {
+  y-x,
+  .y-x {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
@@ -208,97 +217,4 @@ hr[data-y="1"] {
 }
 hr[data-y="1/2"] {
   margin-top: 0.5rem;
-}
-
-/* Font size & line height */
-
-[data-text] {
-  line-height: var(--text--line-height, 1.25);
-}
-[data-text~="0"] {
-  font-size: var(--size-0);
-}
-[data-text~="-1"] {
-  font-size: var(--size--1);
-}
-[data-text~="bold"] {
-  font-weight: bold;
-}
-[data-text~="italic"] {
-  font-style: italic;
-}
-
-[data-size="+7"] {
-  font-size: var(--size-7);
-}
-[data-size="+6"] {
-  font-size: var(--size-6);
-}
-[data-size="+5"] {
-  font-size: var(--size-5);
-}
-[data-size="+4"] {
-  font-size: var(--size-4);
-}
-[data-size="+3"] {
-  font-size: var(--size-3);
-}
-[data-size="+2"] {
-  font-size: var(--size-2);
-}
-[data-size="+1"] {
-  font-size: var(--size-1);
-}
-[data-size="0"] {
-  font-size: var(--size-0);
-}
-[data-size="-1"] {
-  font-size: var(--size--1);
-}
-[data-size="-2"] {
-  font-size: var(--size--2);
-}
-
-/* Color */
-
-[data-tone] {
-  color: var(--tone-500);
-}
-[data-tone="----"] {
-  color: var(--tone-100);
-}
-[data-tone="---"] {
-  color: var(--tone-200);
-}
-[data-tone="--"] {
-  color: var(--tone-300);
-}
-[data-tone="-"] {
-  color: var(--tone-400);
-}
-[data-tone="+"] {
-  color: var(--tone-600);
-}
-[data-tone="++"] {
-  color: var(--tone-700);
-}
-[data-tone="+++"] {
-  color: var(--tone-800);
-}
-[data-tone="++++"] {
-  color: var(--tone-900);
-}
-
-/* MEDIUM BREAKPOINT */
-
-/* Flex column (medium) */
-
-/* 48em ~= 768px */
-@media (min-width: 48em) {
-  .X\>\=48em {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
 }
