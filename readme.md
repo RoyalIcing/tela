@@ -1,47 +1,94 @@
 # Tela
 
-Alpha version can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@3d61f6e92daaed960b19598c6c1d851420feae4e/tela.css>
+## Take Element Layout Acceptable
+
+Can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@3d61f6e92daaed960b19598c6c1d851420feae4e/tela.css>
+
+## Breakpoints
+
+Tela has one breakpoint at `40rem`. To use it write your class with the `+` suffix. (This is equivalent to Tailwind 4’s `sm` breakpoint)
 
 ## Grid
 
 Uses CSS grid.
 
+### One column grid:
+
+```html
+<ul class="|1|">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
+</ul>
+```
+
 ### Two column grid:
 
 ```html
-<ul
-class="G |-+-|"
->
-<li>First</li>
-<li>Second</li>
-<li>Third</li>
-<li>Fourth</li>
+<ul class="|2|">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
+</ul>
+```
+
+### One column grid, two columns on wide viewports:
+
+```html
+<ul class="|1| |2|+">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
 </ul>
 ```
 
 ### Three column grid:
 
 ```html
-<ul
-class="G |-+-+-|"
->
-<li>First</li>
-<li>Second</li>
-<li>Third</li>
-<li>Fourth</li>
+<ul class="|3|">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
 </ul>
 ```
 
 ### Four column grid:
 
 ```html
-<ul
-class="G |-+-+-+-|"
->
-<li>First</li>
-<li>Second</li>
-<li>Third</li>
-<li>Fourth</li>
+<ul class="|4|">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
+</ul>
+```
+
+### Five column grid:
+
+```html
+<ul class="|5|">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
+  <li>Fifth</li>
+</ul>
+```
+
+### Six column grid:
+
+```html
+<ul class="|6|">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
+  <li>Fifth</li>
+  <li>Sixth</li>
 </ul>
 ```
 
@@ -50,16 +97,22 @@ class="G |-+-+-+-|"
 Uses flexbox with row direction, items aligned center.
 
 ```html
-<ul
-  class="X"
-  style="
-    --X-spacing: 1rem;
-  "
->
+<ul class="x-y">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
 </ul>
+```
+
+Or alternatively use the custom element:
+
+```html
+<form>
+    <x-x>
+        <button>Add</button>
+        <button>Remove</button>
+    </x-x>
+</form>
 ```
 
 ## Y
@@ -67,12 +120,7 @@ Uses flexbox with row direction, items aligned center.
 Uses flexbox with column direction.
 
 ```html
-<ul
-  class="Y"
-  style="
-    --Y-spacing: 1rem;
-  "
->
+<ul class="Y" style="gap: 1rem">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
@@ -84,39 +132,27 @@ Uses flexbox with column direction.
 ### Centering text
 
 ```html
-<div
-  class="-X-"
->
+<div class="-X-">
   <h1>Some heading</h1>
   <p>Some descriptive text</p
 </div>
 ```
 
+## Accessibility Enhancements
+
+```html
+<button>
+  <svg>…</svg>
+  <data-invisible>Close modal</data-invisible>
+</button>
+```
+
 ## Responsive
 
 ```html
-<ul class="Y X>=48em">
+<ul class="Y X>=40rem">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
 </ul>
-```
-
-## Getting started
-
-You may define the following CSS variables:
-
-```css
-:root {
-  --size-7: 4rem;
-  --size-6: 3rem;
-  --size-5: 2.25rem;
-  --size-4: 1.875rem;
-  --size-3: 1.5rem;
-  --size-2: 1.25rem;
-  --size-1: 1.125rem;
-  --size-0: 1rem;
-  --size--1: 0.875rem;
-  --size--2: 0.75rem;
-}
 ```

@@ -1,20 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <meta charset="utf-8" />
-  <title>TELA Example HTML</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="tela.css" />
+    <meta charset="utf-8" />
+    <title>Tela Example HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tela.css" />
 
-  <body>
-    <x-x>Flex row</x-x>
-    <x-y>Flex row on mobile, column above</x-y>
-    <y-y>Flex column on mobile</y-y>
-    <y-x>Flex column on mobile, row above</y-x>
+    <style>
+        :root {
+            font-family: system-ui, sans-serif;
+            line-height: 1.25;
+        }
+        hr {
+            border-color: rgba(0, 0, 0, 25%);
+            border-style: solid none none solid;
+        }
+        ul {
+            background: rgba(0, 0, 0, 6%);
+            box-shadow: inset 0 0 1px lch(80 0 0);
+            border-radius: 0.25lh;
+        }
+        li,
+        dt,
+        dd {
+            --hue: 0;
+            background: lch(90 50 var(--hue));
+            box-shadow:
+                inset -1px -1px 1px lch(75 75 var(--hue)),
+                inset 1px 1px 1px lch(100 60 var(--hue));
+            border-radius: 0.25lh;
+        }
+        *:nth-child(8n + 1):where(li, dd, dt) {
+            --hue: 0;
+        }
+        *:nth-child(8n + 2):where(li, dd, dt) {
+            --hue: 45;
+        }
+        *:nth-child(8n + 3):where(li, dd, dt) {
+            --hue: 90;
+        }
+        *:nth-child(8n + 4):where(li, dd, dt) {
+            --hue: 135;
+        }
+        *:nth-child(8n + 5):where(li, dd, dt) {
+            --hue: 180;
+        }
+        *:nth-child(8n + 6):where(li, dd, dt) {
+            --hue: 225;
+        }
+        *:nth-child(8n + 7):where(li, dd, dt) {
+            --hue: 270;
+        }
+        *:nth-child(8n + 8):where(li, dd, dt) {
+            --hue: 315;
+        }
+        li {
+            min-width: 2lh;
+        }
 
-    <data-only>Visually hidden text for screen readers</data-only>
-    <visually-hidden>Visually hidden text for screen readers</visually-hidden>
-    <p data-only>Visually hidden text for screen readers</p>
+        fieldset {
+            border: none;
+        }
+        button {
+            padding: 0.5lh 1lh;
+            background: #222;
+            color: white;
+            border: none;
 
-    <p aria-hidden="true">Visual affordance hidden from screen readers</p>
-  </body>
+            &:hover {
+                background: #444;
+            }
+        }
+
+        [class]:hover {
+            outline: solid cornflowerblue;
+        }
+        [class]:hover::before {
+            position: absolute;
+            content: attr(class);
+            color: rebeccapurple;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px dotted cornflowerblue;
+            font-weight: 400;
+            font-family: monospace;
+            left: 0;
+        }
+    </style>
+
+    <body>
+        <h1 class="-t-">tela.css</h1>
+
+        <x-x>Flex row</x-x>
+        <x-y>Flex row on mobile, column above</x-y>
+        <y-y>Flex column on mobile</y-y>
+        <y-x>Flex column on mobile, row above</y-x>
+
+        <data-invisible>Invisible text for screen readers</data-invisible>
+        <p data-invisible>Invisible text for screen readers</p>
+        <p class="data-invisible">Invisible text for screen readers</p>
+
+        <p aria-hidden="true">Visual affordance hidden from screen readers</p>
+
+        <ul class="|> -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <hr />
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <hr />
+
+        <ul class="X -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <br />
+
+        <ul class="X |x -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <br />
+
+        <ul class="X x| -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <br />
+
+        <ul class="X |x-x| -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <br />
+
+        <ul class="X |-x-x-| -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <br />
+
+        <ul class="X -t-">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <hr />
+            <li>D</li>
+            <li>E</li>
+        </ul>
+
+        <hr />
+
+        <article class="|1| -x-">
+            <dl class="|2| |max|">
+                <div class="|0|">
+                    <dt class="t| b">Name</dt>
+                    <dd>Joe Smith</dd>
+                </div>
+                <div class="|0|">
+                    <dt class="t| b">Age</dt>
+                    <dd>36</dd>
+                </div>
+                <div class="|0|">
+                    <dt class="t| b">Favorite color</dt>
+                    <dd>Teal</dd>
+                </div>
+            </dl>
+        </article>
+
+        <hr />
+
+        <article class="|1| -t-">
+            <ul class="|1|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+
+            <ul class="|2|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+
+            <ul class="|3|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+
+            <ul class="|4|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+
+            <ul class="|5|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+
+            <ul class="|6|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+            </ul>
+        </article>
+    </body>
 </html>
