@@ -53,8 +53,9 @@
         *:nth-child(8n + 8):where(li, dd, dt) {
             --hue: 315;
         }
-        li {
+        li:not([role="separator"]) {
             min-width: 2lh;
+            text-align: center;
         }
 
         fieldset {
@@ -74,9 +75,10 @@
         [class]:hover {
             outline: solid cornflowerblue;
         }
-        [class]:hover::before {
+        [class]:not([data-no-tips]):hover::before {
             position: absolute;
             content: attr(class);
+            padding: 0.125lh;
             color: rebeccapurple;
             background: rgba(255, 255, 255, 0.9);
             border: 1px dotted cornflowerblue;
@@ -100,18 +102,7 @@
 
         <p aria-hidden="true">Visual affordance hidden from screen readers</p>
 
-        <ul class="|> -t-">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <hr />
-            <li>D</li>
-            <li>E</li>
-        </ul>
-
-        <hr />
-
-        <ul class="X -t-">
+        <ul class="X">
             <li>A</li>
             <li>B</li>
             <li>C</li>
@@ -121,7 +112,7 @@
 
         <br />
 
-        <ul class="X |x -t-">
+        <ul class="X |x">
             <li>A</li>
             <li>B</li>
             <li>C</li>
@@ -131,7 +122,7 @@
 
         <br />
 
-        <ul class="X x| -t-">
+        <ul class="X x|">
             <li>A</li>
             <li>B</li>
             <li>C</li>
@@ -141,7 +132,7 @@
 
         <br />
 
-        <ul class="X |x-x| -t-">
+        <ul class="X |x-x|">
             <li>A</li>
             <li>B</li>
             <li>C</li>
@@ -151,7 +142,7 @@
 
         <br />
 
-        <ul class="X |-x-x-| -t-">
+        <ul class="X |-x-x-|">
             <li>A</li>
             <li>B</li>
             <li>C</li>
@@ -161,11 +152,11 @@
 
         <br />
 
-        <ul class="X -t-">
+        <ul class="X">
             <li>A</li>
             <li>B</li>
             <li>C</li>
-            <hr />
+            <li role="separator" />
             <li>D</li>
             <li>E</li>
         </ul>
@@ -173,6 +164,7 @@
         <hr />
 
         <article class="|1| -x-">
+            <br />
             <dl class="|2| |max|">
                 <div class="|0|">
                     <dt class="t| b">Name</dt>
@@ -187,12 +179,27 @@
                     <dd>Teal</dd>
                 </div>
             </dl>
+            <br />
         </article>
 
         <hr />
 
-        <article class="|1| -t-">
+        <article class="|1|" data-no-tips>
+            <ul class="|>">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+
             <ul class="|1|">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+
+            <ul class="|1| |max| -x-">
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>

@@ -135,17 +135,6 @@ a:hover {
     max-width: var(--measure);
 }
 
-[data-p~="1"] {
-    --px: 1rem;
-    --py: 1rem;
-    /* padding: 1rem; */
-}
-[data-p~="1/2"] {
-    --px: 0.5rem;
-    --py: 0.5rem;
-    /* padding: 0.5rem; */
-}
-
 /* Grid */
 
 .\|1\|,
@@ -158,6 +147,7 @@ a:hover {
     --c: 1;
     --c-track: minmax(min-content, 1fr);
     display: grid;
+    grid-auto-columns: max-content;
     grid-template-columns: repeat(var(--c), var(--c-track));
     /* align-items: center; */
     column-gap: var(--x);
@@ -205,6 +195,10 @@ a:hover {
     justify-items: start;
 }
 
+.x0x {
+    --x: 0;
+}
+
 /* Flex row */
 
 .X {
@@ -212,7 +206,7 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: safe center;
     column-gap: var(--x);
     row-gap: var(--y);
     list-style: none;
@@ -220,16 +214,17 @@ a:hover {
     margin: 0;
 }
 .X.\|x {
-    justify-content: flex-start;
+    justify-content: safe flex-start;
 }
 .X.x\| {
-    justify-content: flex-end;
+    justify-content: safe flex-end;
 }
 .X.\|x-x\| {
     justify-content: space-between;
 }
 .X.\|-x-x-\| {
-    justify-content: space-around;
+    justify-content: space-evenly;
+    column-gap: 0;
 }
 
 .X > * + * {
@@ -241,6 +236,9 @@ a:hover {
 .X > *:last-child {
     margin-right: var(--X-outer);
 }
+/*.X > [role="separator"] {
+    margin-left: auto;
+}*/
 .X > [role="separator"] {
     margin-left: auto;
 }
