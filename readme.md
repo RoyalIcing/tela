@@ -1,8 +1,14 @@
-# Tela
+# Tela.css
 
-## Take Element Layout Acceptable
+## Tightly Expressive Layout Accelerator
 
-Can be loaded via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@3d61f6e92daaed960b19598c6c1d851420feae4e/tela.css>
+Tela aims to make common layouts take just a couple of CSS classes. Instead of chaining together many utility classes, use honed classes that let you express your layout in just a few keystrokes.
+
+Use CSS grid and flexbox without having to learn all their intricacies. Tela offset an opinionated subset of these layout primitives, composing them into slightly higher level forms inspired by other layout systems like SwiftUI.
+
+## Install
+
+Load via jsdelivr: <https://cdn.jsdelivr.net/gh/RoyalIcing/tela@3d61f6e92daaed960b19598c6c1d851420feae4e/tela.css>
 
 ## Breakpoints
 
