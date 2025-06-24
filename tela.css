@@ -24,36 +24,7 @@ hr {
 
 .\|0\| {
     display: contents;
-}
-
-x-x,
-x-y,
-.x-x,
-.x-y {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-y-y,
-y-x,
-.y-y,
-.y-x {
-    display: flex;
-    flex-direction: column;
-}
-/* Tailwind sm breakpoint is 640px */
-@media (min-width: 40rem) {
-    x-y,
-    .x-y {
-        flex-direction: column;
-    }
-    y-x,
-    .y-x {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+    list-style: none;
 }
 
 /* Visually hidden */
@@ -201,7 +172,13 @@ a:hover {
 
 /* Flex row */
 
-.X {
+x-x,
+x-y,
+.x-x,
+.\|x-x,
+.x-x\|,
+.\|x-x\|,
+.\|-x-x-\| {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -213,34 +190,43 @@ a:hover {
     padding: 0;
     margin: 0;
 }
-.X.\|x {
+.\|x-x {
     justify-content: safe flex-start;
 }
-.X.x\| {
+.x-x\| {
     justify-content: safe flex-end;
 }
-.X.\|x-x\| {
+.\|x-x\| {
     justify-content: space-between;
 }
-.X.\|-x-x-\| {
+.\|-x-x-\| {
     justify-content: space-evenly;
     column-gap: 0;
 }
 
-.X > * + * {
-    margin-left: var(--X-spacing);
-}
-.X > *:first-child {
-    margin-left: var(--X-outer);
-}
-.X > *:last-child {
-    margin-right: var(--X-outer);
-}
-/*.X > [role="separator"] {
+.x-x > [role="separator"] {
     margin-left: auto;
-}*/
-.X > [role="separator"] {
-    margin-left: auto;
+}
+
+y-y,
+y-x,
+.y-y,
+.y-x {
+    display: flex;
+    flex-direction: column;
+}
+/* Tailwind sm breakpoint is 640px */
+@media (min-width: 40rem) {
+    x-y,
+    .x-y {
+        flex-direction: column;
+    }
+    y-x,
+    .y-x {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 
 /* Flex column */

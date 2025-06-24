@@ -10,6 +10,10 @@
             font-family: system-ui, sans-serif;
             line-height: 1.25;
         }
+        body {
+            max-width: 65ch;
+            margin: auto;
+        }
         hr {
             border-color: rgba(0, 0, 0, 25%);
             border-style: solid none none solid;
@@ -78,10 +82,12 @@
         [class]:not([data-no-tips]):hover::before {
             position: absolute;
             content: attr(class);
-            padding: 0.125lh;
+            font-size: 1rem;
+            padding: 0.125lh 1ch;
             color: rebeccapurple;
             background: rgba(255, 255, 255, 0.9);
             border: 1px dotted cornflowerblue;
+            border-left: none;
             font-weight: 400;
             font-family: monospace;
             left: 0;
@@ -102,89 +108,74 @@
 
         <p aria-hidden="true">Visual affordance hidden from screen readers</p>
 
-        <ul class="X">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>E</li>
-        </ul>
+        <article class="|1|" data-no-tips>
+            <h2 class="-t-">Flexbox</h2>
 
-        <br />
+            <ul class="x-x">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
 
-        <ul class="X |x">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>E</li>
-        </ul>
+            <x-x class="<x-x>">
+                <ul class="|0|">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                </ul>
+            </x-x>
 
-        <br />
+            <ul class="|x-x">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
 
-        <ul class="X x|">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>E</li>
-        </ul>
+            <ul class="x-x|">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
 
-        <br />
+            <ul class="|x-x|">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
 
-        <ul class="X |x-x|">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>E</li>
-        </ul>
+            <ul class="|-x-x-|">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
 
-        <br />
-
-        <ul class="X |-x-x-|">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>E</li>
-        </ul>
-
-        <br />
-
-        <ul class="X">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li role="separator" />
-            <li>D</li>
-            <li>E</li>
-        </ul>
-
-        <hr />
-
-        <article class="|1| -x-">
-            <br />
-            <dl class="|2| |max|">
-                <div class="|0|">
-                    <dt class="t| b">Name</dt>
-                    <dd>Joe Smith</dd>
-                </div>
-                <div class="|0|">
-                    <dt class="t| b">Age</dt>
-                    <dd>36</dd>
-                </div>
-                <div class="|0|">
-                    <dt class="t| b">Favorite color</dt>
-                    <dd>Teal</dd>
-                </div>
-            </dl>
-            <br />
+            <ul class="x-x">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li role="separator" />
+                <li>D</li>
+                <li>E</li>
+            </ul>
         </article>
 
         <hr />
 
         <article class="|1|" data-no-tips>
+            <h2 class="-t-">CSS Grid</h2>
+
             <ul class="|>">
                 <li>1</li>
                 <li>2</li>
@@ -260,6 +251,28 @@
                 <li>11</li>
                 <li>12</li>
             </ul>
+        </article>
+
+        <hr />
+
+        <article class="|1| -x-">
+            <h2 class="-t-">Key-value pairs</h2>
+
+            <dl class="|2| |max|">
+                <div class="|0|">
+                    <dt class="t| b">Name</dt>
+                    <dd>Joe Smith</dd>
+                </div>
+                <div class="|0|">
+                    <dt class="t| b">Age</dt>
+                    <dd>36</dd>
+                </div>
+                <div class="|0|">
+                    <dt class="t| b">Favorite color</dt>
+                    <dd>Teal</dd>
+                </div>
+            </dl>
+            <br />
         </article>
     </body>
 </html>
